@@ -8,17 +8,21 @@
 </head>
 <body style="background-color: black;">
     <script>
-        function play() {
+        function playaudio() {
             var audio = document.getElementById("audio");
             document.getElementById("audio").loop = true;
             audio.play();
         }
-        function stop() {
+        function stopaudio() {
             audio.pause();
         }
+        //I wanna die please I don't know js that much plz spare me computer
+        function theActualFuckingThing() {
+            setTimeout(playaudio(), 1000);
+        }
     </script>
-    <button onclick='play();'>Test</button>
+    <button onclick='theActualFuckingThing();'>Test</button>
     <audio id="audio" src="Audio.mp3"></audio>
-    <button onclick="stop();">Stop</button>
+    <button onclick="stopaudio();">Stop</button>
 </body>
 </html>
