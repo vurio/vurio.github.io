@@ -11,13 +11,14 @@
         function play() {
             var audio = document.getElementById("audio");
             document.getElementById("audio").loop = true;
+            
             audio.play();
         }
         function stop() {
             audio.pause();
         }
         function actual_play() {
-            setTimeout(() => {  play(); }, 3123123123000);
+            setTimeout(play(), 123123123123);
         }
     </script>
     <button onclick='actual_play();'>Test</button>
