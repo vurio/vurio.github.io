@@ -20,8 +20,12 @@
         function theActualFuckingThing() {
             setTimeout(playaudio(), 1000);
         }
+        //I give up imma copy paste I don't know howw this setTimeout thing works
+        function myFunction() {
+            setTimeout(function(){ audio.play(); }, 3000);
+        }
     </script>
-    <button onclick='theActualFuckingThing();'>Test</button>
+    <button onclick='myFunction();'>Test</button>
     <audio id="audio" src="Audio.mp3"></audio>
     <button onclick="stopaudio();">Stop</button>
 </body>
