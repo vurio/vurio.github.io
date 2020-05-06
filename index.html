@@ -17,7 +17,8 @@
             audio.pause();
         }
         function actual_play() {
-            setTimeout(() => {  play(); }, 1000);
+            setTimeout(() => {  play(); console.log("yes"); }, 3000);
+            console.log("no")
         }
     </script>
     <button onclick='actual_play();'>Test</button>
