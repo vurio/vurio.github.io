@@ -8,21 +8,25 @@
 </head>
 <body style="background-color: black;">
     <script>
+        /*
         function playaudio() {
             var audio = document.getElementById("audio");
             document.getElementById("audio").loop = true;
             audio.play();
         }
-        function stopaudio() {
-            audio.pause();
-        }
+        */
         //I wanna die please I don't know js that much plz spare me computer
         function theActualFuckingThing() {
             setTimeout(playaudio(), 1000);
         }
         //I give up imma copy paste I don't know howw this setTimeout thing works
         function myFunction() {
-            setTimeout(function(){ play(); }, 3000);
+            var audio = document.getElementById("audio");
+            document.getElementById("audio").loop = true;
+            setTimeout(function(){ audio.play(); }, 3000);
+        }
+        function stopaudio() {
+            audio.pause();
         }
         function wwhy() {
             console.log("github is gay");
