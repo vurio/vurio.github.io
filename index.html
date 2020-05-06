@@ -8,6 +8,7 @@
 </head>
 <body style="background-color: black;">
     <script>
+        var i = 0;
         /*
         function playaudio() {
             var audio = document.getElementById("audio");
@@ -27,6 +28,13 @@
         }
         function stopaudio() {
             audio.pause();
+        }
+        function repeat() {
+            setTimeout(function(){i++}, 25000);
+            console.log(i);
+            if (i == 2) {
+                audio.pause();
+            }
         }
         function wwhy() {
             console.log("github is gay");
