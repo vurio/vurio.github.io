@@ -16,6 +16,9 @@
         function stop() {
             audio.pause();
         }
+        function actual_play() {
+            setTimeout(() => {  play(); }, 2000);
+        }
     </script>
     <button onclick='play();'>Test</button>
     <audio id="audio" src="Yes please.m4a"></audio>
