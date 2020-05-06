@@ -11,28 +11,14 @@
         function play() {
             var audio = document.getElementById("audio");
             document.getElementById("audio").loop = true;
-            
             audio.play();
         }
         function stop() {
             audio.pause();
         }
-        function sleep(milliseconds) {
-            setTimeout(play(), milliseconds);
-        }
-        function sleep(milliseconds) {
-        var start = new Date().getTime();
-        for (var i = 0; i < 1e7; i++) {
-            if ((new Date().getTime() - start) > milliseconds){
-            break;
-            }
-        }
-            play();
-        }
     </script>
-    <!--<button onclick='sleep(200000);'>Test</button>
-    <button onclick="stop();">Stop</button>-->
-    <audio id="audio" src="Yes please.m4a"></audio>
-    <a href="#" onclick="sleep(10000);">Lets go</a>
+    <button onclick='play();'>Test</button>
+    <audio id="audio" src="Audio.mp3"></audio>
+    <button onclick="stop();">Stop</button>
 </body>
 </html>
