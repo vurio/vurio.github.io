@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Time to fuck up my brother</title>
-</head>
-<body style="background-color: black;">
+    <title>Alarm</title>
     <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime();">
+    <script>
+        time = document.getElementById("txt");
+        function start2() {
+            console.log(1);
+        }
+        var x = "12:00:00";
+        for(var i = 0; i < 100000000; i ++) {
+            if (time == x) {
+                audio.play();
+            }
+            //setTimeout(start2(), 1000);
+        }
         //I wanna die btw also this is taking much more efford for the fist step than i expected so I am not even half way done with this and its been 2 days and 6 hours of trying to figure this out.
         function startAudio() {
             var audio = document.getElementById("audio");
@@ -20,7 +48,8 @@
         }
     </script>
     <button onclick='startAudio();'>start</button>
-    <audio id="audio" src="Audio.mp3"></audio>
+    <audio id="audio" src="Audio.wav"></audio>
     <button onclick="stopAudio();">Stop</button>
+    <div id="txt"></div>
 </body>
 </html>
