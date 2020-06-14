@@ -28,3 +28,5 @@ var iDidnt = function() {
     location.reload();
 }
 var point = 0;
+var x = document.getElementById("x");
+x.play();

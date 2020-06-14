@@ -1,3 +1,9 @@
+p {
+  color: white;
+}
+body {
+  background-color: black;
+}
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +11,15 @@
 #game {
   width: 500px;
   height: 200px;
-  border: 1px solid black;
+  border: 1px solid purple;
+  margin: auto;
+  width: 65%;
+  background-image: url("background.png");
+}
+#all {
+  margin: auto;
+  width: 50%;
+  border: 2px solid grey;
 }
 #character {
   width: 20px;
