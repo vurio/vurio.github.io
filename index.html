@@ -8,19 +8,21 @@
 </head>
 <body>
     <div id="all">
-    <p style="text-align: center;">Click to reload if you failed, you noob
-        <br>space to jump btw
-    </p>
     <div id="game">
         <p id="point"></p>
         <div id="character"></div>
         <div id="block"></div>
     </div>
     <p id="t" style="text-align: center;"></p>
+    <button onclick="jump();" id="jumpB">Jump</button>
+    <button onclick="iDidnt();" id="restartB">Reset</button>
     </div>
     <audio id = "x">
         <source src="oh yeah its all coming togeather.wav" type="audio/wav">
     </audio>
+    <div id="controls">
+        <p>Pc: <br> click = restart <br> space = jump <br><br>Mobile: just buttons</p>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>
