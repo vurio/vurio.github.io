@@ -1,6 +1,8 @@
 p {
   color: white;
-  text-align: center;
+}
+html {
+  min-width: 2000px;
 }
 body {
   background-color: black;
@@ -12,14 +14,13 @@ body {
 #game {
   width: 500px;
   height: 200px;
+  margin-left: 100px;
+  left: 100px;
   border: 1px solid purple;
-  margin: auto;
-  width: 65%;
   background-image: url("background.png");
 }
 #all {
-  margin: auto;
-  width: 50%;
+
   border: 2px solid grey;
 }
 #character {
@@ -78,12 +79,12 @@ body {
 #jumpB {
   position: absolute;
   top:30px;
-  width: 100px;
+  width: 75px;
   height: 75px;
 }
 #restartB {
   position: absolute;
   top: 135px;
-  width: 100px;
+  width: 75px;
   height: 75px;
 }
