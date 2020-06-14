@@ -59,7 +59,7 @@ body {
     left: 480px;
   }
   100% {
-    left: -40px;
+    left: 0px;
   }
 }
 @keyframes jump {
