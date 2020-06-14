@@ -32,11 +32,13 @@ body {
   top: 150px;
   left: 50px;
 }
-#points {
+#point {
   position: absolute;
   background-color: grey;
-  top: 60px;
-  left: 50px;
+  margin: auto;
+  display: block;
+  padding-left: 25px;
+  padding-top: 10px;
   width: 35px;
   height: 35px;
   border: 1px solid black;
@@ -53,6 +55,7 @@ body {
   top: 130px;
   left: 480px;
   animation: block 1s infinite linear;
+  animation-delay: 3s;
 }
 @keyframes block {
   0% {
