@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" onclick="iDidnt();">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1280, initial-scale=1">
     <title>js game</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -14,15 +14,14 @@
         <div id="block"></div>
     </div>
     <p id="t" style="text-align: center;"></p>
-    <button onclick="jump();" id="jumpB">Jump</button>
-    <button onclick="iDidnt();" id="restartB">Reset</button>
     </div>
     <audio id = "x">
         <source src="oh yeah its all coming togeather.wav" type="audio/wav">
     </audio>
-    <div id="controls">
-        <p>Pc: <br> click = restart <br> space = jump <br><br>Mobile: just buttons</p>
-    </div>
+    <button onclick="jump();" id="jumpB">Jump</button>
+    <button onclick="iDidnt();" id="restartB">Reset</button>
+    <p id="controls">You can also press space to jump</p>
+    
 </body>
 <script src="index.js"></script>
 </html>
