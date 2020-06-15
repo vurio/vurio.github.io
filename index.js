@@ -2,7 +2,27 @@ var character = document.getElementById("character");
 var block = document.getElementById("block");
 //remove later
 block.style.top = "110px";
+//clones for levels also make at least one level tomorrow you lazy frick just a reminder (◕‿◕)
 var blockClone = block.cloneNode(true);
+var blockClone2 = block.cloneNode(true);
+var blockClone3 = block.cloneNode(true);
+var blockClone4 = block.cloneNode(true);
+var blockClone5 = block.cloneNode(true);
+var blockClone6 = block.cloneNode(true);
+var blockClone7 = block.cloneNode(true);
+var blockClone8 = block.cloneNode(true);
+var blockClone9 = block.cloneNode(true);
+var blockClone10 = block.cloneNode(true);
+var blockClone11 = block.cloneNode(true);
+var blockClone12 = block.cloneNode(true);
+var blockClone13 = block.cloneNode(true);
+var blockClone14 = block.cloneNode(true);
+var blockClone15 = block.cloneNode(true);
+var blockClone16 = block.cloneNode(true);
+var blockClone17 = block.cloneNode(true);
+var blockClone18 = block.cloneNode(true);
+var blockClone19 = block.cloneNode(true);
+var blockClone20 = block.cloneNode(true);
 var iDidnt = function() {
     location.reload();
 }
