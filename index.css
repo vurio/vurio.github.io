@@ -46,6 +46,9 @@ body {
 .animate {
   animation: jump 500ms;
 }
+.crouch {
+  animation: down 1s;
+}
 #block {
   width: 20px;
   height: 20px;
@@ -79,6 +82,20 @@ body {
     top: 150px;
   }
 }
+@keyframes down {
+  0% {
+    top: 150px;
+  }
+  10% {
+    top: 180px;
+  }
+  90% {
+    top: 180px;
+  }
+  100% {
+    top: 150px;
+  }
+}
 #jumpB {
   position: absolute;
   top:30px;
@@ -87,7 +104,13 @@ body {
 }
 #restartB {
   position: absolute;
-  top: 135px;
+  top: 125px;
+  width: 75px;
+  height: 75px;
+}
+#downB {
+  position: absolute;
+  top: 230px;
   width: 75px;
   height: 75px;
 }
