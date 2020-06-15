@@ -32,6 +32,11 @@ body {
   top: 150px;
   left: 50px;
 }
+#dead.start { 
+  background: url(transparent.png) 0 0;
+  margin: auto;
+  width: 50%;
+}
 #point {
   position: absolute;
   background-color: grey;
