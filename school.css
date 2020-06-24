@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#home {
+    position: absolute;
+    right: 80px;
+    top: 0px;
+  }
+  #second {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+  }
+  #school {
+    position: absolute;
+    right: 130px;
+    top: 0px;
+  }
+#title {
+    text-align: center;
+}
+#Math {
+    position: relative;
+    left: 10px;
+}
+#one {
+    width: 500px;
+}
+#two {
+    width: 400px;
+}
+#three {
+    width: 500px;
+}
+#Geography {
+    position: relative;
+    left: 10px;
+}
+#cite {
+    position: relative;
+    left: 15px;
+}

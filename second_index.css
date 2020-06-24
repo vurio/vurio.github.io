@@ -3,7 +3,7 @@
 }
 #yes {
     border: 1px solid black;
-    width: 1000px;
+    width:100%;
     height: 500px;
     background-color: grey;
 }
@@ -11,12 +11,17 @@
     position: absolute;
     right: 80px;
     top: 0px;
-}
-#second {
+  }
+  #second {
     position: absolute;
     right: 10px;
     top: 0px;
-}
+  }
+  #school {
+    position: absolute;
+    right: 130px;
+    top: 0px;
+  }
 * {
     padding: 0;
     margin: 0;
