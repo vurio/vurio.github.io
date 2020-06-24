@@ -1,6 +1,26 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 var dead = document.getElementById("dead.start");
+var blockClone1 = block.cloneNode(true);
+var blockClone2 = block.cloneNode(true);
+var blockClone3 = block.cloneNode(true);
+var blockClone4 = block.cloneNode(true);
+var blockClone5 = block.cloneNode(true);
+var blockClone6 = block.cloneNode(true);
+var blockClone7 = block.cloneNode(true);
+var blockClone8 = block.cloneNode(true);
+var blockClone9 = block.cloneNode(true);
+var blockClone10 = block.cloneNode(true);
+var blockClone11 = block.cloneNode(true);
+var blockClone12 = block.cloneNode(true);
+var blockClone13 = block.cloneNode(true);
+var blockClone14 = block.cloneNode(true);
+var blockClone15 = block.cloneNode(true);
+var blockClone16 = block.cloneNode(true);
+var blockClone17 = block.cloneNode(true);
+var blockClone18 = block.cloneNode(true);
+var blockClone19 = block.cloneNode(true);
+var blockClone20 = block.cloneNode(true);
 //remove later
 var startGame = function() {
     dead.innerHTML = "Game Starting In 3 Seconds";
@@ -13,26 +33,6 @@ var startGame = function() {
 //                                                     levels
 //clones for levels also make at least one level tomorrow you lazy frick just a reminder (◕‿◕)
 var spawn = function(p) {
-    var blockClone1 = block.cloneNode(true);
-    var blockClone2 = block.cloneNode(true);
-    var blockClone3 = block.cloneNode(true);
-    var blockClone4 = block.cloneNode(true);
-    var blockClone5 = block.cloneNode(true);
-    var blockClone6 = block.cloneNode(true);
-    var blockClone7 = block.cloneNode(true);
-    var blockClone8 = block.cloneNode(true);
-    var blockClone9 = block.cloneNode(true);
-    var blockClone10 = block.cloneNode(true);
-    var blockClone11 = block.cloneNode(true);
-    var blockClone12 = block.cloneNode(true);
-    var blockClone13 = block.cloneNode(true);
-    var blockClone14 = block.cloneNode(true);
-    var blockClone15 = block.cloneNode(true);
-    var blockClone16 = block.cloneNode(true);
-    var blockClone17 = block.cloneNode(true);
-    var blockClone18 = block.cloneNode(true);
-    var blockClone19 = block.cloneNode(true);
-    var blockClone20 = block.cloneNode(true);
     blockClone20.style.background = "url(finish.png) 0 0";
     if (p == 1) {
         document.getElementById("game").appendChild(blockClone1);
@@ -95,14 +95,20 @@ var spawn = function(p) {
         document.getElementById("game").appendChild(blockClone20);
     }
 }
+
 //document.getElementById("game").appendChild(blockClone20)
 //LEVEL 1
+/*
 var lvOne  = function() {
-    
+    setTimeout(function() {
+        spawn(1)
+        blockClone1.style.top = "90px";
+    }, 1000);
+    block.style.top = "130px";
 }
 //                                                      end of levels
-
-
+lvOne();
+*/
 startGame();
 block.style.top = "130px";
 
@@ -157,6 +163,12 @@ document.body.onkeyup = function(e){
     if (e.keyCode == 82){
         iDidnt();
     }
+    if (e.keyCode  == 74){
+        x.play();
+    }
+    if (e.keyCode == 75){
+        x.pause();
+    }
 }
 function down() {
     if (character.classList != "crouch") {
@@ -166,4 +178,3 @@ function down() {
         character.classList.remove("crouch");
     }, 500);
 }
-x.play();
