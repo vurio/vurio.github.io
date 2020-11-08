@@ -2,31 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>js game</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="index.css">-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <button id="home" onclick="window.location.href = 'index.html';">Home</button>
-    <button id="second" onclick="window.location.href='second_index.html';">Unblocker</button>
-    <button id="school" onclick="window.location.href = 'school.html';">School</button>
-    <div id="all">
-    <div id="game">
-        <p id="point">0</p>
-        <div id="character"></div>
-        <div id="block"></div>
-        <div id="dead.start"></div>
-    </div>
-    <p id="t" style="text-align: center;"></p>
-    </div>
-    <audio id = "x">
-        <source src="oh yeah its all coming togeather.wav" type="audio/wav">
-    </audio>
-    <button onclick="jump();" id="jumpB">Jump</button>
-    <button onclick="iDidnt();" id="restartB">Reset</button>
-    <button id="downB" onclick="down();">Crouch</button>
-    <p id="controls" style="text-align: center;">R = reset \\// SPACE = jump \\// SHIFT = crouch<br>J = Music \\// K = No Music<br> have fun!</p>
-    
+    <p>Sign Up</p>
+    <input type="text" id="newUsername">
+    <input type="password" id="newPassword">
+    <button id="enterSign" onclick="enterSign();">Sign Up</button>
+    <br><p id="succ"></p>
+    <p>Log In</p>
+    <input type="text" id="username">
+    <input type="password" id="password">
+    <button id="enterLog" onclick="enterLog();">Log In</button>
+    <br><p id="logStat"></p>
+    <script>
+        var socket = io();
+        var newUser = document.getElementById("newUsername");
+        var newPass = document.getElementById("newPassword");
+        var logUser = document.getElementById("username");
+        var logPass = document.getElementById("password");
+        var signSucc = document.getElementById("succ");
+        var logStat = document.getElementById("logStat");
+        /*
+        var enterSign = function() {
+//            userDataUser = newUser.value;
+//            userDataPass = newPass.value;
+            console.log(newUser.value + " " + newPass.value);
+            socket.emit("test", {"user": newUser.value, "password": newPass.value});
+            
+        }
+        */
+        var enterSign = function() {
+//            userDataUser = newUser.value;
+//            userDataPass = newPass.value;
+//            console.log(newUser.value + " " + newPass.value);
+            socket.emit("userData", newUser.value, newPass.value);
+            newUser.value = "";
+            newPass.value = "";
+
+            socket.on("signSucc", function(va){
+//                console.log("here")
+                signSucc.innerHTML = "Sign Up Successful!";
+            })
+            socket.on("userEx", function(userName){
+//                console.log("yes")
+                signSucc.innerHTML = "User: " + userName + " already excists."
+            })
+            
+        }
+
+        var enterLog = function() {
+//            userLogUser = signUser.value;
+//            userLogPass = signPass.value;
+            socket.emit("userLog", logUser.value, logPass.value);
+            logUser.value = "";
+            logPass.value = "";
+
+            socket.on("logInfo", function(va){
+                if (va == true) {
+                    logStat.innerHTML="Log In Successfull";
+                }
+                else{
+                    logStat.innerHTML="Incorrect User or Password"
+                }
+            })
+        }
+
+
+    </script>
 </body>
-<script src="index.js"></script>
 </html>

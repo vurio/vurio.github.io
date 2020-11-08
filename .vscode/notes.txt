@@ -1,0 +1,32 @@
+script:
+var socket = io();
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+
+JSON File:
+
+
+createfile:
+fs.writeFile("test.txt", asdf, function(err) {
+    if (err) {
+        console.log(err);
+    }
+});
+
+
+add and stringafy:
+
+//dict['myAnotherData'] = "yes yes yes";
+//var asdf = JSON.stringify(dict);
+//var yes =JSON.parse(asdf);
+
+
+
+Load:
+let rawdata = fs.readFileSync('student.json');
+let student = JSON.parse(rawdata);
+console.log(student);
